@@ -152,19 +152,10 @@ gunicorn pm_workspace.app:server --bind 0.0.0.0:8050 --workers 1
 
 ## Usage Flow
 
-1. **`/replication`** — Check reconstruction quality: rolling tracking error, OHLCV snapshot, compositions table
-2. **`/cockpit`** — Set T0, lookback window, BL views (sector/absolute/relative), UCITS constraints
-3. **`/holdings`** → optimization runs automatically — inspect optimal weights, BL diagnostics, sector radar
-4. **`/whatif`** — Simulate out-of-sample Buy & Hold, compare against benchmark
-
----
-
-## Documentation
-
-- [METHODOLOGY.md](METHODOLOGY.md) — Mathematical framework (BL, sparsemax, CVaR, walk-forward protocol)
-- [TECHNICAL_SPECIFICATION.md](TECHNICAL_SPECIFICATION.md) — Data schemas, pipeline, architecture, deployment
-
----
+1. **`/REPLICATION BENCHMARK`** — Check reconstruction quality: rolling tracking error, OHLCV snapshot, compositions table
+2. **`/PORTFOLIO CONSTRUCTEUR`** — Set T0, lookback window, BL views (sector/absolute/relative), UCITS constraints
+3. **`/HOLDING`** → optimization runs automatically — inspect optimal weights, BL diagnostics, sector radar
+4. **`/REPORTING & SIMULATION`** — Simulate out-of-sample Buy & Hold, compare against benchmark
 
 ## References
 
